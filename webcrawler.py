@@ -10,7 +10,9 @@ def trade_spider(max_pages):
         soup = BeautifulSoup(plain_text)
         for link in soup.findAll('a',{'class':'item-name'}):
             href = link.get('href')
+            title = link.string
             print(href)
+            print(title)
         page+=1
 
 
